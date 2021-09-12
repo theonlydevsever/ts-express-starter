@@ -1,0 +1,78 @@
+{
+  "name": "@theonlydevsever/ts-express-starter",
+  "version": "0.1.0",
+  "description": "A basic express boilerplate built with Typescript",
+  "main": "dist/server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theonlydevsever/ts-express-starter.git"
+  },
+  "author": "Dylan O'Leary <dylanolearydev@gmail.com>",
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": [
+      "@theonlydevsever"
+    ]
+  },
+  "prettier": "@theonlydevsever/prettier",
+  "_moduleAliases": {
+    "routes": "dist/routes"
+  },
+  "scripts": {
+    "build": "tsc",
+    "check:style": "concurrently -n Linter,Prettier -c magenta,green,blue \"yarn lint\" \"yarn prettier\"",
+    "clean": "rm -fr dist",
+    "docs:build": "yarn docs:clean && yarn build && typedoc",
+    "docs:clean": "rm -fr docs",
+    "docs:rebuild": "typedoc",
+    "dev": "nodemon",
+    "husky:commit": "yarn check:style && yarn test && yarn build",
+    "husky:push": "yarn check:style && yarn test && yarn build",
+    "lint": "eslint . && echo \"\n\nLint Complete - S'all Good Man!\n\n\" ",
+    "prepare": "husky install",
+    "prettier": "prettier --check \"./src/*\"",
+    "prettier:fix": "prettier --write \"./src/*\"",
+    "start": "node dist/server.js",
+    "start:dev": "ts-node ./src/server.ts",
+    "test": "jest --verbose",
+    "test:coverage": "jest --verbose --coverage",
+    "test:watch": "jest --verbose --watch"
+  },
+  "devDependencies": {
+    "@theonlydevsever/eslint-config": "^1.0.0",
+    "@theonlydevsever/prettier": "^1.0.0",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.9.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "concurrently": "^6.2.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-jest-extended": "^0.0.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.0",
+    "jest": "^27.1.1",
+    "jest-chain": "^1.1.5",
+    "jest-extended": "^0.11.5",
+    "module-alias": "^2.2.2",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.0",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "tsc": "^2.0.3",
+    "typedoc": "^0.22.3",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
+}

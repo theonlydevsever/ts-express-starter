@@ -1,0 +1,10 @@
+coverage
+dist
+*.db
+*.log
+*.lock
+*.json
+docs
+node_modules
+public
+.husky

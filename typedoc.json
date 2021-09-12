@@ -1,0 +1,8 @@
+{
+  "includeVersion": true,
+  "entryPoints": ["src/server.ts"],
+  "exclude": ["**/node_modules/**", "*.test.ts"],
+  "name": "@theonlydevsever/ts-express-starter",
+  "readme": "./README.md",
+  "out": "docs"
+}
