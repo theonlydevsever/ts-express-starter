@@ -16,6 +16,8 @@
   },
   "prettier": "@theonlydevsever/prettier",
   "_moduleAliases": {
+    "errors": "dist/errors",
+    "lib": "dist/lib",
     "routes": "dist/routes"
   },
   "scripts": {
@@ -25,7 +27,7 @@
     "docs:build": "yarn docs:clean && yarn build && typedoc",
     "docs:clean": "rm -fr docs",
     "docs:rebuild": "typedoc",
-    "dev": "nodemon",
+    "dev": "export NODE_ENV=development && nodemon",
     "husky:commit": "yarn check:style && yarn test && yarn build",
     "husky:push": "yarn check:style && yarn test && yarn build",
     "lint": "eslint . && echo \"\n\nLint Complete - S'all Good Man!\n\n\" ",
@@ -39,13 +41,14 @@
     "test:watch": "jest --verbose --watch"
   },
   "devDependencies": {
-    "@theonlydevsever/eslint-config": "^1.0.0",
+    "@theonlydevsever/eslint-config": "^1.0.2",
     "@theonlydevsever/prettier": "^1.0.0",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.9.1",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
+    "chalk": "^4.1.2",
     "concurrently": "^6.2.1",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
@@ -71,6 +74,7 @@
     "typescript": "^4.4.3"
   },
   "dependencies": {
+    "@theonlydevsever/utilities": "^1.8.2",
     "compression": "^1.7.4",
     "dotenv": "^10.0.0",
     "express": "^4.17.1"

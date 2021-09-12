@@ -633,15 +633,20 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@theonlydevsever/eslint-config@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@theonlydevsever/eslint-config/-/eslint-config-1.0.0.tgz#9955828b42d4521167162bb0a1c40dd303f13aa6"
-  integrity sha512-v9OAETc2FcN0Q+vhZfHSzyqB09z5BuCriK04saMQKDi3Gnw+EVYi+5CEmkw40oO5tQCUU5A4Vrv316SXNSXAtg==
+"@theonlydevsever/eslint-config@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@theonlydevsever/eslint-config/-/eslint-config-1.0.2.tgz#d08a2e595cb67ef1a2b14d5931a8769c7afe1ea1"
+  integrity sha512-6fTTIq/KLHOf1f/97eZM8B5yeqFCwrdHMXn6jqViJwGRonCqqnqvn4kuaRclSyx6nTiLgVi6jAmLLnJq7gLm9w==
 
 "@theonlydevsever/prettier@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@theonlydevsever/prettier/-/prettier-1.0.0.tgz#4b4d1b277eb74987e4c85296721c8721a373bb7d"
   integrity sha512-X2hfJdZhpxd3soZDazOz0PdX9RjoaaDj9kXS7+08WWtqTp25XDHHy2kspxAx/DighgabWRjJhDl/Ju82Ul+U9g==
+
+"@theonlydevsever/utilities@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@theonlydevsever/utilities/-/utilities-1.8.2.tgz#37d3aebb90cb8ac9614b460e9e137ff33615b2f9"
+  integrity sha512-XZe4xbtJzOl7u/uNxBpQxC/yNxXu7VhS1DL24/F+Sl3BkclUJPMCqoeSV+ENqwuaUJk8x7cboWRNx5hqQE4fyg==
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -1440,7 +1445,7 @@ chalk@^3.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^4.0.0, chalk@^4.1.0:
+chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
   integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==

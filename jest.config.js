@@ -1,5 +1,5 @@
 module.exports = {
-    collectCoverageFrom: ["src/**/*.ts"],
+    collectCoverageFrom: ["src/**/*.ts", "!src/lib/printEnv.ts", "!src/**/index.ts"],
     coverageDirectory: "coverage",
     globals: {
         "ts-jest": {

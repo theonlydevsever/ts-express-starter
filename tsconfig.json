@@ -10,6 +10,8 @@
     "rootDir": "./src",
     "baseUrl": "./src",
     "paths": {
+      "errors/*": ["errors/*"],
+      "lib/*": ["lib/*"],
       "routes/*": ["routes/*"]
     }
   },
