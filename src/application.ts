@@ -1,30 +1,17 @@
-import express, { NextFunction, Request, Response } from "express";
+import express, { Express, NextFunction, Request, Response } from "express";
 import compression from "compression";
 
 import { ErrorDetails, NotFoundError } from "errors";
 import { BaseError } from "errors/BaseError";
 import { baseRouter } from "routes";
 
-enum ApplicationState {
-    ERROR = "error",
-    READY = "ready"
-}
-
-const initializeApplication: () => void = () => {
-    const PORT = process?.env?.PORT || 3000;
+/**
+ * Initializes and configures an express application
+ *
+ * @returns An express application
+ */
+const initializeApplication: () => Express = () => {
     const app = express();
-
-    app.on(ApplicationState.READY, () => {
-        app.listen(PORT, () => {
-            console.info(`Application listening on http://localhost:${PORT}`);
-        });
-    });
-
-    app.on(ApplicationState.ERROR, () => {
-        console.error("Application has failed to start");
-
-        process.exit(1);
-    });
 
     try {
         app.use(express.json());
@@ -71,13 +58,14 @@ const initializeApplication: () => void = () => {
             });
         });
 
-        app.emit(ApplicationState.READY);
+        return app;
     } catch (error) {
         console.error(error);
+        console.error("Application has failed to start");
 
-        app.emit(ApplicationState.ERROR);
+        process.exit(1);
     }
 };
 
 export default initializeApplication;
-export { ApplicationState, initializeApplication };
+export { initializeApplication };

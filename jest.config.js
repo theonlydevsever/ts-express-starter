@@ -7,9 +7,11 @@ module.exports = {
             diagnostics: false
         }
     },
+    moduleDirectories: ["node_modules", "src"],
     preset: "ts-jest",
     roots: ["<rootDir>/src"],
-    setupFilesAfterEnv: ["./testSetup.js"],
+    setupFiles: ["./jest/setEnvVars.js"],
+    setupFilesAfterEnv: ["./jest/testSetup.js"],
     testEnvironment: "node",
     testTimeout: 30000,
     transform: {
