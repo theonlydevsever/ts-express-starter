@@ -12,6 +12,7 @@
     "paths": {
       "errors/*": ["errors/*"],
       "lib/*": ["lib/*"],
+      "middlewares/*": ["middlewares/*"],
       "root/*": ["*"],
       "routes/*": ["routes/*"]
     }

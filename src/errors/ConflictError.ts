@@ -1,5 +1,5 @@
 import { BaseError } from "./BaseError";
-import { ErrorCode, ErrorDetails, ErrorStatus } from "errors";
+import { DefinedErrorCodes, ErrorCode, ErrorDetails, ErrorStatus } from "errors";
 
 class ConflictError extends BaseError {
     statusCode: ErrorStatus = ErrorStatus.Conflict;
@@ -7,7 +7,7 @@ class ConflictError extends BaseError {
     details: ErrorDetails = [];
 
     constructor(
-        public message: string = "Conflict Error",
+        public message: string = DefinedErrorCodes.TODE0005,
         public errorDetails: ErrorDetails | string[] = []
     ) {
         super(message);

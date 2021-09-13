@@ -1,5 +1,5 @@
 import { BaseError } from "./BaseError";
-import { ErrorCode, ErrorDetails, ErrorStatus } from "errors";
+import { DefinedErrorCodes, ErrorCode, ErrorDetails, ErrorStatus } from "errors";
 
 class NotAllowedError extends BaseError {
     statusCode: ErrorStatus = ErrorStatus.NotAllowed;
@@ -7,7 +7,7 @@ class NotAllowedError extends BaseError {
     details: ErrorDetails = [];
 
     constructor(
-        public message: string = "Not Allowed Error",
+        public message: string = DefinedErrorCodes.TODE0004,
         public errorDetails: ErrorDetails | string[] = []
     ) {
         super(message);

@@ -1,5 +1,5 @@
 import { BaseError } from "./BaseError";
-import { ErrorCode, ErrorDetails, ErrorStatus } from "errors";
+import { DefinedErrorCodes, ErrorCode, ErrorDetails, ErrorStatus } from "errors";
 
 class ExpectationFailedError extends BaseError {
     statusCode: ErrorStatus = ErrorStatus.ExpectationFailed;
@@ -7,7 +7,7 @@ class ExpectationFailedError extends BaseError {
     details: ErrorDetails = [];
 
     constructor(
-        public message: string = "Expectation Failed Error",
+        public message: string = DefinedErrorCodes.TODE0006,
         public errorDetails: ErrorDetails | string[] = []
     ) {
         super(message);

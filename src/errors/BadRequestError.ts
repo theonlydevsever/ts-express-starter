@@ -1,5 +1,5 @@
 import { BaseError } from "./BaseError";
-import { ErrorCode, ErrorDetails, ErrorStatus } from "errors";
+import { DefinedErrorCodes, ErrorCode, ErrorDetails, ErrorStatus } from "errors";
 
 class BadRequestError extends BaseError {
     statusCode: ErrorStatus = ErrorStatus.BadRequest;
@@ -7,7 +7,7 @@ class BadRequestError extends BaseError {
     details: ErrorDetails = [];
 
     constructor(
-        public message: string = "Bad Request Error",
+        public message: string = DefinedErrorCodes.TODE0001,
         public errorDetails: ErrorDetails | string[] = []
     ) {
         super(message);

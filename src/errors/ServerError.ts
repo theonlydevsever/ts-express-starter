@@ -1,5 +1,5 @@
 import { BaseError } from "./BaseError";
-import { ErrorCode, ErrorDetails, ErrorStatus } from "errors";
+import { DefinedErrorCodes, ErrorCode, ErrorDetails, ErrorStatus } from "errors";
 
 class ServerError extends BaseError {
     statusCode: ErrorStatus = ErrorStatus.ServerError;
@@ -7,7 +7,7 @@ class ServerError extends BaseError {
     details: ErrorDetails = [];
 
     constructor(
-        public message: string = "Server Error",
+        public message: string = DefinedErrorCodes.TODE0007,
         public errorDetails: ErrorDetails | string[] = []
     ) {
         super(message);

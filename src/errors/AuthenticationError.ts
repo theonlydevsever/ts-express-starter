@@ -1,5 +1,5 @@
 import { BaseError } from "./BaseError";
-import { ErrorCode, ErrorDetails, ErrorStatus } from "errors";
+import { DefinedErrorCodes, ErrorCode, ErrorDetails, ErrorStatus } from "errors";
 
 class AuthenticationError extends BaseError {
     statusCode: ErrorStatus = ErrorStatus.Unauthorized;
@@ -7,7 +7,7 @@ class AuthenticationError extends BaseError {
     details: ErrorDetails = [];
 
     constructor(
-        public message: string = "Authentication Error",
+        public message: string = DefinedErrorCodes.TODE0002,
         public errorDetails: ErrorDetails | string[] = []
     ) {
         super(message);

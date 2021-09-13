@@ -11,6 +11,7 @@ module.exports = {
     moduleNameMapper: {
         "^errors/(.*)$": "<rootDir>/src/errors/$1",
         "^lib/(.*)$": "<rootDir>/src/lib/$1",
+        "^middlewares/(.*)$": "<rootDir>/src/middlewares/$1",
         "^root/(.*)$": "<rootDir>/src/$1",
         "^routes/(.*)$": "<rootDir>/src/routes/$1"
     },
