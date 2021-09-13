@@ -1,6 +1,6 @@
 import request from "supertest";
 
-import { initializeApplication } from "../../application";
+import { initializeApplication } from "root/application";
 
 describe("Base Router", () => {
     const application = initializeApplication();

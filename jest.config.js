@@ -8,6 +8,12 @@ module.exports = {
         }
     },
     moduleDirectories: ["node_modules", "src"],
+    moduleNameMapper: {
+        "^errors/(.*)$": "<rootDir>/src/errors/$1",
+        "^lib/(.*)$": "<rootDir>/src/lib/$1",
+        "^root/(.*)$": "<rootDir>/src/$1",
+        "^routes/(.*)$": "<rootDir>/src/routes/$1"
+    },
     preset: "ts-jest",
     roots: ["<rootDir>/src"],
     setupFiles: ["./jest/setEnvVars.js"],
