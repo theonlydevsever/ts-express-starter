@@ -18,6 +18,6 @@
     }
   },
   "include": ["./src/**/*.ts"],
-  "exclude": ["node_modules", "./src/__tests__"],
+  "exclude": ["node_modules", "./src/**/__tests__/*"],
   "lib": ["es2015"]
 }

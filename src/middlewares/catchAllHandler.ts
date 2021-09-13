@@ -9,12 +9,15 @@ import { DefinedErrorCodes, NotFoundError } from "errors";
  * @param req The incoming request object
  * @param res The express response object
  * @param next The `next` function used to move on to the next middleware
- * @returns The `next` function which will pass the error to the global error handler
  */
-const catchAllHandler = (req: Request, res: Response, next: NextFunction) => {
-    const params = (Object.values(req.params) || []).map((param) => param);
+const catchAllHandler: (req: Request, res: Response, next: NextFunction) => void = (
+    req,
+    res,
+    next
+) => {
+    const params = (Object.values(req?.params) || []).map((param) => param);
 
-    return next(
+    next(
         new NotFoundError(
             DefinedErrorCodes.TODE0003,
             params.length > 0
